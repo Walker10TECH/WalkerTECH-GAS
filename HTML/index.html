@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Consumo Médio de Combustível</title>
+    <link rel="stylesheet" href="/CSS/style.css">
+</head>
+<body>
+    <h1>Calculadora de Consumo Médio</h1>
+
+    <div class="container">
+        <form id="formulario">
+            <div class="tipo-veiculo">
+                <label for="tipo">Tipo de Veículo:</label>
+                <select id="tipo">
+                    <option value="carro">Carro</option>
+                    <option value="moto">Moto</option>
+                    <option value="caminhonete">Caminhonete</option>
+                    <option value="caminhao">Caminhão</option>
+                </select>
+            </div>
+
+            <div class="inputs">
+                <div class="distancia">
+                    <label for="distancia">Distância Percorrida (km):</label>
+                    <input type="number" id="distancia" step="0.1" min="0" required>
+                </div>
+
+                <div class="litros">
+                    <label for="litros">Litros Abastecidos:</label>
+                    <input type="number" id="litros" step="0.01" min="0" required>
+                </div>
+            </div>
+
+            <button type="button" onclick="calcularConsumo()">Calcular Consumo Médio</button>
+        </form>
+
+        <div id="resultado" class="resultado">
+            <p>Consumo Médio (km/L): <span id="consumoMedio"></span></p>
+        </div>
+    </div>
+
+    <script src="/JS/script.js"></script>
+</body>
+</html>
